@@ -1,10 +1,10 @@
-# Laravel Comissão API
+# Comissão API
 
 API RESTful desenvolvida com Laravel 10 (PHP 8.2+) para simular e gerenciar comissões de vendas em uma plataforma digital. A aplicação segue boas práticas de arquitetura, organização de código e validação de dados, com persistência em arquivo JSON (sem uso de banco de dados relacional).
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## 🚀 Tecnologias utilizadas
 
 * PHP 8.2+
 * Laravel 10
@@ -21,7 +21,7 @@ Desenvolver uma API que simule o cálculo de comissões sobre vendas diretas e a
 * **Vendas Afiliadas**: plataforma (10%), produtor (60%), afiliado (30%)
 * As comissões são sempre calculadas sobre o `valor_total` informado.
 
-### 🎯 Objetivos do Desafio:
+### 🎯 Objetivos do desafio:
 
 * Calcular comissões com base no tipo de venda
 * Registrar, listar, atualizar e remover simulações de vendas
@@ -80,23 +80,6 @@ storage/app/sales.json             # Persistência dos dados de vendas
 * Aplica as porcentagens fixa com base no `valor_total` e `tipo_venda`.
 * Verifica se os percentuais estão corretamente definidos e lança exceções em caso de erro ou tipo inexistente.
 
-```json
-{
-  "direta": {
-    "plataforma": 10,
-    "produtor": 90,
-    "afiliado": 0
-  },
-  "afiliada": {
-    "plataforma": 10,
-    "produtor": 60,
-    "afiliado": 30
-  }
-}
-```
-
-Esse arquivo pode ser estendido no futuro para suportar diferentes produtos ou regras por categoria.
-
 ---
 
 ## 📲 Endpoints RESTful
@@ -112,7 +95,7 @@ Esse arquivo pode ser estendido no futuro para suportar diferentes produtos ou r
 
 ---
 
-## 🔎 Validações e Regras de Negócio
+## 🔎 Validações e Regras de negócio
 
 ### Campos obrigatórios:
 
@@ -129,7 +112,7 @@ Esse arquivo pode ser estendido no futuro para suportar diferentes produtos ou r
 
 ---
 
-## ✅ Exemplo de Requisição
+## ✅ Exemplo de requisição
 
 ### POST `/api/sales`
 
@@ -140,7 +123,7 @@ Esse arquivo pode ser estendido no futuro para suportar diferentes produtos ou r
 }
 ```
 
-### Resposta
+### Callback
 
 ```json
 {
@@ -157,11 +140,11 @@ Esse arquivo pode ser estendido no futuro para suportar diferentes produtos ou r
 
 ---
 
-## ⚙️ Instalação do Projeto
+## ⚙️ Instalação do projeto
 
 ```bash
-git clone https://github.com/seu-usuario/laravel-comissao-api.git
-cd laravel-comissao-api
+git clone https://github.com/wesleysnapss/laravel-comisso-api
+cd laravel-comisso-api
 composer install
 cp .env.example .env
 php artisan key:generate
@@ -188,7 +171,7 @@ php artisan serve
 
 ---
 
-## 🧪 Testes Automatizados
+## 🧪 Testes automatizados
 
 Local: `tests/Feature/SaleTest.php`
 
@@ -207,7 +190,7 @@ Testes cobrem:
 
 ---
 
-## 📌 Decisões Técnicas
+## 📌 Decisões técnicas
 
 * Utilizado `apiResource` para manter RESTful padrão
 * Persistência em arquivo foi mantida para simular banco
@@ -218,8 +201,7 @@ Testes cobrem:
 
 ## 👨‍💻 Autor
 
-**Wesley Snap**
-Tech Lead
+**Wesley Snap** - Tech Lead
 
 ---
 
